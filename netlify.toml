@@ -8,4 +8,10 @@
   status = 200
   force = true 
 
+[[redirects]]
+from = "/othersite"
+to = "https://repro2.netlify.app/"
+status = 200
+force = true 
+
   

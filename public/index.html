@@ -8,13 +8,20 @@
 </head>
 <body>
   <script>
-    fetch('/json')
+    fetch('/myfunc')
     .then(res => {
       res.json()
       .then(json => {
         document.body.innerHTML += json.message
       })
     })
+        fetch('/myotherfunc')
+            .then(res => {
+              res.json()
+                .then(json => {
+                  document.body.innerHTML += json.message
+                })
+            })
   </script>
 </body>
 </html>

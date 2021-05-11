@@ -9,8 +9,15 @@
   force = true 
 
 [[redirects]]
-from = "/json"
-to = "https://deploy-preview-1--repro2.netlify.app"
+from = "/myfunc"
+to = "https://deploy-preview-1--repro2.netlify.app/myfunc"
+status = 200
+force = true 
+headers = {X-From = "netlify"}
+
+[[redirects]]
+from = "/myotherfunc"
+to = "https://deploy-preview-1--repro2.netlify.app/myotherfunc"
 status = 200
 force = true 
 headers = {X-From = "netlify"}

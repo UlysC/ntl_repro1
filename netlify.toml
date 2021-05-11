@@ -10,7 +10,7 @@
 
 [[redirects]]
 from = "/json"
-to = "https://deploy-preview-1--repro2.netlify.app/j.json"
+to = "https://deploy-preview-1--repro2.netlify.app/j"
 status = 200
 force = true 
 

@@ -13,5 +13,7 @@ from = "/json"
 to = "https://deploy-preview-1--repro2.netlify.app/.netlify/functions/myfunc"
 status = 200
 force = true 
+headers = {X-From = "netlify"}
+
 
   

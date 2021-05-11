@@ -8,7 +8,7 @@
 </head>
 <body>
   <script>
-    fetch('/two/myfunc')
+    fetch('https://repro2.netlify.app/.netlify/functions/myfunc')
     .then(res => {
       res.json()
       .then(json => {

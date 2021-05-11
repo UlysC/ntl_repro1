@@ -9,8 +9,8 @@
   force = true 
 
 [[redirects]]
-from = "/othersite"
-to = "https://deploy-preview-1--repro2.netlify.app/"
+from = "/json"
+to = "https://deploy-preview-1--repro2.netlify.app/j.json"
 status = 200
 force = true 
 

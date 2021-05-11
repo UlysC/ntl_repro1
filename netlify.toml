@@ -4,7 +4,8 @@
 
 [[redirects]]
   from = "/two/*"
-  to = "https://repro2.netlify.app/:splat"
+  to = "https://repro2.netlify.app/.netlify/functions/:splat"
   status = 200
+  force = true 
 
   

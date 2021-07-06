@@ -15,7 +15,6 @@ from = "/myfunc"
 to = "https://repro2.netlify.app/myfunc"
 status = 200
 force = true 
-headers = {X-From = "netlify"}
 
 [[redirects]]
 from = "/myotherfunc"

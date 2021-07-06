@@ -10,14 +10,14 @@
 
 [[redirects]]
 from = "/myfunc"
-to = "https://deploy-preview-1--repro2.netlify.app/myfunc"
+to = "https://repro2.netlify.app/.netlify/functions/myfunc"
 status = 200
 force = true 
 headers = {X-From = "netlify"}
 
 [[redirects]]
 from = "/myotherfunc"
-to = "https://deploy-preview-1--repro2.netlify.app/myotherfunc"
+to = "https://repro2.netlify.app/.netlify/functions/myotherfunc"
 status = 200
 force = true 
 headers = {X-From = "netlify"}

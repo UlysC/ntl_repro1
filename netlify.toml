@@ -19,7 +19,7 @@ headers = {X-From = "netlify"}
 
 [[redirects]]
 from = "/myotherfunc"
-to = "https://repro2.netlify.app/.netlify/functions/myotherfunc"
+to = "https://repro2.netlify.app/myotherfunc"
 status = 200
 force = true 
 headers = {X-From = "netlify"}

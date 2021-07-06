@@ -57,6 +57,22 @@
               })
           })
 
+                  fetch('https://repro2.netlify.app/myotherfunc')
+                      .then(res => {
+                        res.json()
+                          .then(json => {
+                            print("https://repro2.netlify.app/myotherfunc", json.message)
+                          })
+                      })
+
+                              fetch('https://repro2.netlify.app/myotherfunc')
+                                  .then(res => {
+                                    res.json()
+                                      .then(json => {
+                                        print("https://repro2.netlify.app/myotherfunc", json.message)
+                                      })
+                                  })
+
       function print(message, content){
       document.body.innerHTML += `<strong>${message}</strong> : ${content} \n <br/>`
     }

@@ -12,16 +12,53 @@
     .then(res => {
       res.json()
       .then(json => {
-        document.body.innerHTML += json.message
+        print("/myfunc", json.message)
       })
     })
-        fetch('/myotherfunc')
+    fetch('/myotherfunc')
+        .then(res => {
+          res.json()
+            .then(json => {
+              print("/myotherfunc", json.message)
+            })
+        })
+
+      
+      fetch('/two/myfunc')
+          .then(res => {
+            res.json()
+              .then(json => {
+                print("/two/myfunc", json.message)
+              })
+          })
+
+        fetch('/two/myotherfunc')
             .then(res => {
               res.json()
                 .then(json => {
-                  document.body.innerHTML += json.message
+                  print("/two/myotherfunc", json.message)
                 })
             })
+
+        fetch('https://repro2.netlify.app/.netlify/functions/myfunc')
+            .then(res => {
+              res.json()
+                .then(json => {
+                  print("https://repro2.netlify.app/.netlify/functions/myfunc", json.message)
+                })
+            })
+
+      
+        fetch('https://repro2.netlify.app/.netlify/functions/myotherfunc')
+          .then(res => {
+            res.json()
+              .then(json => {
+                print("https://repro2.netlify.app/.netlify/functions/myotherfunc", json.message)
+              })
+          })
+      function print(message, content){
+      document.body.innerHTML += `${message} : ${content} \n <br/>`
+    }
   </script>
 </body>
 </html>

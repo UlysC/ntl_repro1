@@ -24,54 +24,54 @@
         })
 
       
-      fetch('/two/myfunc')
+    fetch('/two/myfunc')
+        .then(res => {
+          res.json()
+            .then(json => {
+              print("/two/myfunc", json.message)
+            })
+        })
+
+    fetch('/two/myotherfunc')
+        .then(res => {
+          res.json()
+            .then(json => {
+              print("/two/myotherfunc", json.message)
+            })
+        })
+
+    fetch('https://repro2.netlify.app/.netlify/functions/myfunc')
+        .then(res => {
+          res.json()
+            .then(json => {
+              print("https://repro2.netlify.app/.netlify/functions/myfunc", json.message)
+            })
+        })
+
+  
+    fetch('https://repro2.netlify.app/.netlify/functions/myotherfunc')
+      .then(res => {
+        res.json()
+          .then(json => {
+            print("https://repro2.netlify.app/.netlify/functions/myotherfunc", json.message)
+          })
+      })
+
+      fetch('https://repro2.netlify.app/myfunc')
           .then(res => {
             res.json()
               .then(json => {
-                print("/two/myfunc", json.message)
+                print("https://repro2.netlify.app/myfunc", json.message)
               })
           })
 
-        fetch('/two/myotherfunc')
-            .then(res => {
-              res.json()
-                .then(json => {
-                  print("/two/myotherfunc", json.message)
-                })
-            })
-
-        fetch('https://repro2.netlify.app/.netlify/functions/myfunc')
-            .then(res => {
-              res.json()
-                .then(json => {
-                  print("https://repro2.netlify.app/.netlify/functions/myfunc", json.message)
-                })
-            })
-
-      
-        fetch('https://repro2.netlify.app/.netlify/functions/myotherfunc')
+      fetch('https://repro2.netlify.app/myotherfunc')
           .then(res => {
             res.json()
               .then(json => {
-                print("https://repro2.netlify.app/.netlify/functions/myotherfunc", json.message)
+                print("https://repro2.netlify.app/myotherfunc", json.message)
               })
           })
-
-                  fetch('https://repro2.netlify.app/myotherfunc')
-                      .then(res => {
-                        res.json()
-                          .then(json => {
-                            print("https://repro2.netlify.app/myotherfunc", json.message)
-                          })
-                      })
-
-                              fetch('https://repro2.netlify.app/myotherfunc')
-                                  .then(res => {
-                                    res.json()
-                                      .then(json => {
-                                        print("https://repro2.netlify.app/myotherfunc", json.message)
-                                      })
-                                  })
 
       function print(message, content){
       document.body.innerHTML += `<strong>${message}</strong> : ${content} \n <br/>`
